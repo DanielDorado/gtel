@@ -21,6 +21,7 @@ import (
 )
 
 const (
+	VERSION            = "0.0.1"
 	BEGIN              = "BEGIN"
 	END                = "END"
 	TITLE              = "* GoL Time Emit Log *"

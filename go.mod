@@ -9,6 +9,6 @@ require (
 	github.com/padster/go-sound v0.0.0-20180914225443-0ccfc629d3a6 // indirect
 	github.com/xthexder/go-jack v0.0.0-20200411024353-47bfddad8f6b // indirect
 	golang.org/x/mobile v0.0.0-20190719004257-d2bd2a29d028 // indirect
-	golang.org/x/net v0.0.0-20200222125558-5a598a2470a0 // indirect
+	golang.org/x/tools v0.0.0-20200527183253-8e7acdbce89d // indirect
 	gopkg.in/yaml.v2 v2.2.8
 )
