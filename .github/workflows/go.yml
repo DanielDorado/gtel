@@ -41,8 +41,8 @@ jobs:
         GTEL_VERSION=$(cat main.go  | grep -E "\s*VERSION\s*=" | sed -E 's|.*([0-9]+\.[0-9]+\.[0-9]+).*|\1|g')
         echo "::set-env name=GTEL_VERSION::$GTEL_VERSION"
 
-    - name: Create an Tag
-      uses: simpleactions/create-tag@v1.0.0
+    - name: Tag commit
+      uses: tvdias/github-tagger@v0.0.1
       with:
-        tag: ${{ env.GTEL_VERSION }}
-        message: Version ${{ env.GTEL_VERSION }}
+        repo-token: "${{ secrets.GITHUB_TOKEN }}"
+        tag: "${{ env.GTEL_VERSION }}"
