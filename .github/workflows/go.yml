@@ -42,7 +42,7 @@ jobs:
         echo "GTEL_VERSION=$GTEL_VERSION" >> $GITHUB_ENV
 
     - name: Tag commit
-      uses: actions/checkout@v2
+      uses: kobtea/release-tag-action@master
       with:
         token: "${{ secrets.GITHUB_TOKEN }}"
         message: "${{ env.GTEL_VERSION }}"
