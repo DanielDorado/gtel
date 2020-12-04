@@ -45,5 +45,7 @@ jobs:
       uses: kobtea/release-tag-action@master
       with:
         token: "${{ secrets.GITHUB_TOKEN }}"
-        message: "${{ env.GTEL_VERSION }}"
+        # message: "${{ env.GTEL_VERSION }}"
+        message: "latest"
+        prefix: "" 
         force: true
