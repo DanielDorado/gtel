@@ -42,9 +42,8 @@ jobs:
         echo "GTEL_VERSION=$GTEL_VERSION" >> $GITHUB_ENV
 
     - name: Tag commit
-      uses: tvdias/github-tagger@v0.0.1
+      uses: actions/checkout@v2
       with:
-        repo-token: "${{ secrets.GITHUB_TOKEN }}"
-        tag: "${{ env.GTEL_VERSION }}"
-
-
+        token: "${{ secrets.GITHUB_TOKEN }}"
+        message: "${{ env.GTEL_VERSION }}"
+        force: true
