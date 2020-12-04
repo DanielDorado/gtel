@@ -40,11 +40,11 @@ jobs:
       run:  |
         GTEL_VERSION=$(cat main.go  | grep -E "\s*VERSION\s*=" | sed -E 's|.*([0-9]+\.[0-9]+\.[0-9]+).*|\1|g')
         echo "GTEL_VERSION=$GTEL_VERSION" >> $GITHUB_ENV
+        echo latest > VERSION
 
     - name: Tag commit
       uses: kobtea/release-tag-action@master
       with:
-        token: "${{ secrets.GITHUB_TOKEN }}"
         message: "latest"
         prefix: "" 
         force: true
